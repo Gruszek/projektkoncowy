@@ -1,25 +1,6 @@
-var app = angular.module('portfolioApp', ['pascalprecht.translate', 'ngRoute']);
+var app = angular.module('portfolioApp', ['pascalprecht.translate']);
 
-app.config(function ($routeProvider, $translateProvider) {
-    $routeProvider
-        .when('/', {
-            templateUrl: 'views/home.html'
-        })
-        .when('/about', {
-            templateUrl: 'views/about.html'
-        })
-        .when('/projects', {
-            templateUrl: 'views/projects.html',
-            controller: 'ProjectsController'
-        })
-        .when('/skills', {
-            templateUrl: 'views/skills.html'
-        })
-        .when('/contact', {
-            templateUrl: 'views/contact.html'
-        })
-        .otherwise({ redirectTo: '/' });
-
+app.config(function ($translateProvider) {
     $translateProvider.translations('en', {
         'HOME_TITLE': 'Home',
         'ABOUT_TITLE': 'About Me',
