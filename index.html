@@ -1,45 +1,85 @@
-<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en" ng-app="portfolioApp">
 
-<div class="container">
-    <h1>{{ 'HOME_TITLE' | translate }}</h1>
-    <p>{{ 'HOME_DESC' | translate }}</p>
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- AngularJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
+    <!-- Angular-translate -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.4/angular-translate.min.js"></script>
+    <!-- app.js -->
+    <script src="app.js"></script>
+</head>
 
-    <section id="about">
-        <h2>{{ 'ABOUT_TITLE' | translate }}</h2>
-        <p>{{ 'ABOUT_DESC' | translate }}</p>
-    </section>
+<body ng-controller="MainController">
 
-    <section id="projects">
-        <h2>{{ 'PROJECTS_TITLE' | translate }}</h2>
-        <div class="row">
-            <div class="col-sm-4" ng-repeat="project in projects">
-                <h3>{{ project.title }}</h3>
-                <p>{{ project.description }}</p>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">{{ 'HOME_TITLE' | translate }}</a>
             </div>
+            <ul class="nav navbar-nav">
+                <li><a href="#">{{ 'ABOUT_TITLE' | translate }}</a></li>
+                <li><a href="#">{{ 'PROJECTS_TITLE' | translate }}</a></li>
+                <li><a href="#">{{ 'SKILLS_TITLE' | translate }}</a></li>
+                <li><a href="#">{{ 'CONTACT_TITLE' | translate }}</a></li>
+            </ul>
         </div>
-    </section>
+    </nav>
 
-    <section id="skills">
-        <h2>{{ 'SKILLS_TITLE' | translate }}</h2>
-        <p>{{ skills }}</p>
-    </section>
+    <div class="container">
+        <section id="home">
+            <h1>{{ 'HOME_TITLE' | translate }}</h1>
+            <p>{{ 'HOME_DESC' | translate }}</p>
+        </section>
 
-    <section id="contact">
-        <h2>{{ 'CONTACT_TITLE' | translate }}</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">{{ 'CONTACT_NAME' | translate }}</label>
-                <input type="text" class="form-control" id="name">
+        <section id="about">
+            <h1>{{ 'ABOUT_TITLE' | translate }}</h1>
+            <p>{{ 'ABOUT_DESC' | translate }}</p>
+        </section>
+
+        <section id="projects">
+            <h1>{{ 'PROJECTS_TITLE' | translate }}</h1>
+            <div class="panel panel-default" ng-repeat="project in projects">
+                <div class="panel-heading">{{ project.title }}</div>
+                <div class="panel-body">{{ project.description }}</div>
             </div>
-            <div class="form-group">
-                <label for="email">{{ 'CONTACT_EMAIL' | translate }}</label>
-                <input type="email" class="form-control" id="email">
-            </div>
-            <div class="form-group">
-                <label for="message">{{ 'CONTACT_MESSAGE' | translate }}</label>
-                <textarea class="form-control" id="message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">{{ 'SEND_MESSAGE' | translate }}</button>
-        </form>
-    </section>
-</div>
+        </section>
+
+        <section id="skills">
+            <h1>{{ 'SKILLS_TITLE' | translate }}</h1>
+            <p>{{ skills }}</p>
+        </section>
+
+        <section id="contact">
+            <h1>{{ 'CONTACT_TITLE' | translate }}</h1>
+            <form>
+                <div class="form-group">
+                    <label for="name">{{ 'CONTACT_NAME' | translate }}</label>
+                    <input type="text" class="form-control" id="name" ng-model="contact.name">
+                </div>
+                <div class="form-group">
+                    <label for="email">{{ 'CONTACT_EMAIL' | translate }}</label>
+                    <input type="email" class="form-control" id="email" ng-model="contact.email">
+                </div>
+                <div class="form-group">
+                    <label for="message">{{ 'CONTACT_MESSAGE' | translate }}</label>
+                    <textarea class="form-control" id="message" rows="5" ng-model="contact.message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">{{ 'SEND_MESSAGE' | translate }}</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Moje Portfolio. Wszelkie prawa zastrzeżone.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
