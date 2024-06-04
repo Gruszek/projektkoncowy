@@ -1,1 +1,14 @@
+{
+  "HOME_TITLE": "Home",
+  "HOME_DESC": "Welcome to my portfolio website.",
+  "ABOUT_TITLE": "About Me",
+  "ABOUT_DESC": "I'm a passionate web developer...",
+  "PROJECTS_TITLE": "Projects",
+  "CONTACT_TITLE": "Contact",
+  "CONTACT_NAME": "Name",
+  "CONTACT_EMAIL": "Email",
+  "CONTACT_MESSAGE": "Message",
+  "SEND_MESSAGE": "Send Message",
+  "COPYRIGHT_YEAR": "2024"
+}
 
