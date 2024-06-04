@@ -1,0 +1,13 @@
+{
+  "HOME_TITLE": "Strona główna",
+  "HOME_DESC": "Witaj na naszej stronie!",
+  "ABOUT_TITLE": "O nas",
+  "ABOUT_DESC": "Dowiedz się więcej o naszej firmie.",
+  "PROJECTS_TITLE": "Projekty",
+  "SKILLS_TITLE": "Umiejętności",
+  "CONTACT_TITLE": "Kontakt",
+  "CONTACT_NAME": "Imię",
+  "CONTACT_EMAIL": "Email",
+  "CONTACT_MESSAGE": "Wiadomość",
+  "SEND_MESSAGE": "Wyślij wiadomość"
+}
