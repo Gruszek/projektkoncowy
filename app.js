@@ -53,7 +53,12 @@ app.config(function ($translateProvider) {
 });
 
 app.controller('MainController', function ($scope) {
-    // Controller logic here
+   $scope.projects = [
+    { title: 'Project 1', description: 'Description of Project 1' },
+    { title: 'Project 2', description: 'Description of Project 2' }
+  ];
+
+  $scope.skills = ['HTML', 'CSS', 'JavaScript', 'AngularJS', 'Bootstrap'];
 });
 
 app.controller('ProjectsController', function ($scope) {
