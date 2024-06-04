@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>{{ 'CONTACT_TITLE' | translate }}</h1>
+    <form name="contactForm">
+        <div class="form-group">
+            <label>{{ 'CONTACT_NAME' | translate }}</label>
+            <input type="text" class="form-control" ng-model="contactName" required>
+        </div>
+        <div class="form-group">
+            <label>{{ 'CONTACT_EMAIL' | translate }}</label>
+            <input type="email" class="form-control" ng-model="contactEmail" required>
+        </div>
+        <div class="form-group">
+            <label>{{ 'CONTACT_MESSAGE' | translate }}</label>
+            <textarea class="form-control" rows="5" ng-model="contactMessage" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">{{ 'SEND_MESSAGE' | translate }}</button>
+    </form>
+</div>
