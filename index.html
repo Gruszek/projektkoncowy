@@ -2,25 +2,14 @@
 <html ng-app="portfolioApp">
 <head>
   <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <title>Moja Strona</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate/2.18.4/angular-translate.min.js"></script>
   <script src="app.js"></script>
 </head>
 <body ng-controller="MainController">
   
-  <!-- Navbar -->
-  <nav>
-    <ul>
-      <li><a href="#/">{{ 'HOME_TITLE' | translate }}</a></li>
-      <li><a href="#/about">{{ 'ABOUT_TITLE' | translate }}</a></li>
-      <li><a href="#/projects">{{ 'PROJECTS_TITLE' | translate }}</a></li>
-      <li><a href="#/skills">{{ 'SKILLS_TITLE' | translate }}</a></li>
-      <li><a href="#/contact">{{ 'CONTACT_TITLE' | translate }}</a></li>
-    </ul>
-  </nav>
-  
-  <!-- Content -->
+  <!-- Treść strony -->
   <div>
     <h1>{{ 'HOME_TITLE' | translate }}</h1>
     <p>{{ 'HOME_DESC' | translate }}</p>
