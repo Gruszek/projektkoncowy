@@ -1,0 +1,12 @@
+<div class="container main-content">
+    <h1>{{ 'SKILLS_TITLE' | translate }}</h1>
+    <p>{{ 'SKILLS_DESC' | translate }}</p>
+    <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>AngularJS</li>
+        <li>Bootstrap</li>
+        <li>Responsive Design</li>
+    </ul>
+</div>
